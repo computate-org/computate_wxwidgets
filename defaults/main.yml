@@ -3,6 +3,7 @@ APP_PYTHON: "{{ '/usr/bin/python' if lookup('file', '/usr/bin/python', errors='i
 APP_DEPENDENCIES_REDHAT:
   - git
   - make
+  - gtk2-devel
 APP_DEPENDENCIES: "{{ APP_DEPENDENCIES_REDHAT if ansible_distribution_file_variety == 'RedHat' else APP_DEPENDENCIES_REDHAT }}"
 APP_NAME: wxwidgets
 APP_USER: "{{ lookup('env', 'USER') }}"
