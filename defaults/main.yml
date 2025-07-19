@@ -5,6 +5,8 @@ APP_DEPENDENCIES_REDHAT:
   - make
   - gtk2-devel
   - docbook2X
+  - gcc
+  - gcc-c++
 APP_DEPENDENCIES: "{{ APP_DEPENDENCIES_REDHAT if ansible_distribution_file_variety == 'RedHat' else APP_DEPENDENCIES_REDHAT }}"
 APP_NAME: wxwidgets
 APP_USER: "{{ lookup('env', 'USER') }}"
